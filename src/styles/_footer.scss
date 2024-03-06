@@ -1,0 +1,22 @@
+@use 'variaveis';
+
+.footer {
+    padding: 26px 8px;
+
+    &--footer {
+        background-image: linear-gradient( variaveis.$cordeFundoBlack, variaveis.$cordeFundogrey);
+    }
+
+    &__container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 16px;
+        color: variaveis.$corTexto;
+    }
+}

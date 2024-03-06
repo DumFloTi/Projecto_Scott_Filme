@@ -1,0 +1,62 @@
+@use 'variaveis';
+
+.story {
+    padding: 80px 0;
+
+    &--historia {
+        background-image: linear-gradient( variaveis.$cordeFundoRed, variaveis.$cordeFundoYellow);
+    }
+
+    &--elenco {
+        background-image: linear-gradient( variaveis.$cordeFundoYellow, variaveis.$cordeFundoRed);
+    }
+
+    &--producao {
+        background-image: linear-gradient( variaveis.$cordeFundoRed, variaveis.$cordeFundoYellow);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        margin-top: 20px;
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+        height: auto;
+    }
+
+    &__details {
+        color: variaveis.$corTexto;
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}
